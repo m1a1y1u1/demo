@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-client-customer
+server:
+  port: 8010
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+          defaultZone: http://localhost:1111/eureka/
